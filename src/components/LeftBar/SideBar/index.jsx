@@ -13,6 +13,7 @@ import MessageIcon from "@mui/icons-material/Message";
 import AddIcon from "@mui/icons-material/Add";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { grey } from "@mui/material/colors";
+import { Link } from "react-router-dom";
 
 export default function SideBar() {
   return (
@@ -32,36 +33,44 @@ export default function SideBar() {
       <nav aria-label="main mailbox folders">
         <List>
           <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <HomeIcon sx={{ color: grey[900] }} />
-              </ListItemIcon>
-              <ListItemText primary="Home" sx={{ color: "black" }} />
-            </ListItemButton>
+            <Link to="/">
+              <ListItemButton>
+                <ListItemIcon>
+                  <HomeIcon sx={{ color: grey[900] }} />
+                </ListItemIcon>
+                <ListItemText primary="Home" sx={{ color: "black" }} />
+              </ListItemButton>
+            </Link>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <SearchIcon sx={{ color: grey[900] }} />
-              </ListItemIcon>
-              <ListItemText primary="Search" sx={{ color: "black" }} />
-            </ListItemButton>
+            <Link to="/Search">
+              <ListItemButton>
+                <ListItemIcon>
+                  <SearchIcon sx={{ color: grey[900] }} />
+                </ListItemIcon>
+                <ListItemText primary="Search" sx={{ color: "black" }} />
+              </ListItemButton>
+            </Link>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <MessageIcon sx={{ color: grey[900] }} />
-              </ListItemIcon>
-              <ListItemText primary="Messages" sx={{ color: "black" }} />
-            </ListItemButton>
+            <Link to="/messages">
+              <ListItemButton>
+                <ListItemIcon>
+                  <MessageIcon sx={{ color: grey[900] }} />
+                </ListItemIcon>
+                <ListItemText primary="Messages" sx={{ color: "black" }} />
+              </ListItemButton>
+            </Link>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <AddIcon sx={{ color: grey[900] }} />
-              </ListItemIcon>
-              <ListItemText primary="Post" sx={{ color: "black" }} />
-            </ListItemButton>
+            <Link to="/post">
+              <ListItemButton>
+                <ListItemIcon>
+                  <AddIcon sx={{ color: grey[900] }} />
+                </ListItemIcon>
+                <ListItemText primary="Post" sx={{ color: "black" }} />
+              </ListItemButton>
+            </Link>
           </ListItem>
         </List>
       </nav>
@@ -69,12 +78,14 @@ export default function SideBar() {
         <Divider orientation="horizontal" />
         <List>
           <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <AccountCircleIcon sx={{ color: grey[900] }} />
-              </ListItemIcon>
-              <ListItemText primary="Profile" sx={{ color: "black" }} />
-            </ListItemButton>
+            <Link to="/profile">
+              <ListItemButton>
+                <ListItemIcon>
+                  <AccountCircleIcon sx={{ color: grey[900] }} />
+                </ListItemIcon>
+                <ListItemText primary="Profile" sx={{ color: "black" }} />
+              </ListItemButton>
+            </Link>
           </ListItem>
         </List>
       </nav>
