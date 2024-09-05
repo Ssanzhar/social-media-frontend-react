@@ -1,5 +1,7 @@
 .vertical-divider {
-    width: 2px;
+    width: 6px;
     height: auto;
     background-color: whitesmoke;
+    margin-left: 400px;
+    position: relative;
 }

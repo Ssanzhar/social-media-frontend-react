@@ -1,4 +1,6 @@
 export default function Post({ text, author, date, title }) {
+  console.log(text);
+
   return (
     <div>
       <p>{title}</p>

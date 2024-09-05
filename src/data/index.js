@@ -1,13 +1,16 @@
-let data;
+export const fetchData = async () => {
+  try {
+    const response = await fetch('http://api.plos.org/search?q=title:"Popular"')
+      .then((response) => {
+        return response.json();
+      })
+      .then((response) => {
+        console.log(response.response.docs);
+        return response.response.docs;
+      });
 
-const response = await fetch("http://api.plos.org/search?q=title:Popular")
-  .then((response) => {
-    return response.json();
-  })
-  .then((response) => {
-    // data = response.response.docs;
-    // console.log(data[4]);
-    return response.response.docs;
-  });
-
-export default response;
+    return response;
+  } catch (error) {
+    throw error;
+  }
+};
